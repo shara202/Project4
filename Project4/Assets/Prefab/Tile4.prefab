@@ -375,6 +375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 5x2_fallen_tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c980cee77191f7045b2b2c771cf9eac1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c980cee77191f7045b2b2c771cf9eac1, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -445,6 +449,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c980cee77191f7045b2b2c771cf9eac1, type: 3}
       propertyPath: m_Name
       value: 5x2_fallen_tree (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c980cee77191f7045b2b2c771cf9eac1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c980cee77191f7045b2b2c771cf9eac1, type: 3}
       propertyPath: m_RootOrder
@@ -524,6 +532,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c980cee77191f7045b2b2c771cf9eac1, type: 3}
       propertyPath: m_Name
       value: 5x2_fallen_tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c980cee77191f7045b2b2c771cf9eac1, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c980cee77191f7045b2b2c771cf9eac1, type: 3}
       propertyPath: m_RootOrder

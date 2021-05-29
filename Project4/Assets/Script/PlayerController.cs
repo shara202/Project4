@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController con;
     private Vector3 diection;
+    public GameManager gameManager;
 
     //0: left 1: middle 2:right
     private int desiredLen = 1;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce;
     public float earthGravit=-5;
+    public float maxSpeed;
     void Start()
     {
         con = GetComponent<CharacterController>();
@@ -28,8 +30,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         diection.z = forwardSpeed;
+        if(forwardSpeed < maxSpeed)
+        {
+            forwardSpeed += 1 * Time.deltaTime;
+        }
       
-
 
         if (con.isGrounded)
         {
@@ -72,10 +77,11 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = targetPosition;
         con.center = con.center;
+        con.Move(diection * Time.deltaTime);
     }
     private void FixedUpdate()
     {
-        con.Move(diection * Time.deltaTime);
+       
     }
 
    private void Jump()
@@ -83,5 +89,17 @@ public class PlayerController : MonoBehaviour
         diection.y = jumpForce;
     }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        
+        
+            if (hit.transform.tag == "Obstacle")
+            {
+                gameManager.GameOver();
+              gameManager.isGameActive = true;
+            
+            }
+        
 
+    }
 }
