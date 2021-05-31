@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
+   public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
     public bool isGameActive;
     public Button restartButton;
 
-    private int score;
+     private int score;
     
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+//Update is called once per frame
     void Update()
     {
         if (isGameActive)
@@ -37,10 +37,10 @@ public class GameManager : MonoBehaviour
 
 
     }
-    void UpdateScore(int ScoreToAdd)
+   void UpdateScore(int ScoreToAdd)
     {
         score += ScoreToAdd;
-        scoreText.text = "Score:" + score*Time.deltaTime;
+        scoreText.text = "Score:" + score;
     }
     public void GameOver()
     {
