@@ -25,7 +25,7 @@ public class Coin : MonoBehaviour
             PlayerManager.noOfCoins += 1;
             
             Destroy(gameObject);
-            
+            FindObjectOfType<AudioManager>().PlaySound("Coin");
         }
 
     }
